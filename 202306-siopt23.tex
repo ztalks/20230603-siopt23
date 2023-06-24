@@ -458,7 +458,7 @@
         \item NEWUOA was Powell's \blue{third} trust-region DFO solver, COBYLA and UOBYQA being the first two.
     \vspace{0.3ex}
 \item Mathematically speaking, NEWUOA and UOBYQA are \blue{essentially the same except for the
-    ways the construct the model}.
+    ways they construct the model}.
     \vspace{0.3ex}
 \item Given the experience with UOBYQA (and COBYLA), Powell still spent \red{three frustrating
         years} on the development of NEWUOA.
@@ -495,10 +495,10 @@
             to look after my optimisation software (NEWUOA, BOBYQA and LINCOA). Also I would like
             you to add COBYLA and TOLMIN if you do not have them already.''
             \vspace{1ex}
-        \item Stefan, ICCOPT 2016, Tokyo: People do not want interfaces. They want
+        \item Stefan Wild, ICCOPT 2016, Tokyo: People do not want interfaces. They want
             implementations that they can understand and play with.
             \vspace{1ex}
-        \item Jeff, ISMP 2018, Bordeaux: Numerical linear algebra people have standard
+        \item Jeff Larson, ISMP 2018, Bordeaux: Numerical linear algebra people have standard
             implementations for standard algorithms, e.g., LAPACK, whereas we all work on our own
             implementation of interpolation, model improvement, ...
     \end{itemize}
@@ -662,7 +662,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-    \frametitle{A \textbf{faithful} description of NEWUOA}
+    \frametitle{\textbf{Faithful} pseudocode of NEWUOA in PRIMA}
     \vspace{-1.1ex}
 \textnormal{\small
     \mbox{Pick $\XX\!\subset\!\RR^n$ and $\rho > 0$. Let $M$ interpolate~$f$ on~$\XX$.~\blue{$x_\opt
@@ -696,7 +696,7 @@
 
 
 \begin{frame}
-    \frametitle{NEWUOA: the trust-region phase (lines 2--10)}
+    \frametitle{PRIMA NEWUOA: trust-region phase (ln.~2--10)}
     \vspace{-2.2ex}
     \begin{center}
         \includegraphics[width=0.9\textwidth]{newuoa_tr.png}
@@ -704,7 +704,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{NEWUOA: \texttt{improve\_geo} and \texttt{reduce\_rho} (lines 11--12)}
+    \frametitle{\mbox{PRIMA NEWUOA: \texttt{improve\_geo}, \texttt{reduce\_rho} (ln.~\!11,\! 12)}}
     \vspace{12ex}
     \begin{center}
         \includegraphics[width=0.9\textwidth]{newuoa_geo_rho.png}
@@ -712,7 +712,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{NEWUOA: the post-processing phase (lines 13--17)}
+    \frametitle{PRIMA NEWUOA: post-processing phase (ln.~13--17)}
     \vspace{-2ex}
     \begin{center}
         \includegraphics[width=0.9\textwidth]{newuoa_post.png}
